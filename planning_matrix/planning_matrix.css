@@ -3,6 +3,7 @@
   width: 75vh;
   height: 75vh;
   background: #A0D4D5;
+  position: relative;
 }
 
 .card {
