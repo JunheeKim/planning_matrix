@@ -8,7 +8,7 @@
 
   {{> board}}
   {{> addCard}}
-  {{> cardList}}
+  <!-- {{> cardList}} -->
 </body>
 
 <template name="board">
@@ -19,7 +19,7 @@
   </div>
 </template>
 
-<template name="cardList">
+<!-- <template name="cardList">
   <p>List of tasks</p>
   <div class='cardList'>
     {{#each tasks}}
@@ -38,7 +38,7 @@
       </form>
     </p>
   </div>
-</template>
+</template> -->
 
 <template name="addCard">
   <form class="new-task">
@@ -50,7 +50,8 @@
 </template>
 
 <template name="card">
-  <div class="card" style="position:relative;top:{{cost}}px;left:{{benefit}}px">
+  <div class="card" style="position:absolute;bottom:{{benefit}}px;left:{{cost}}px">
+    <button id={{_id}} class="close">X</button>
     <p>
       {{name}}<br>{{cost}}, {{benefit}}
     </p>
