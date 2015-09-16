@@ -1,0 +1,17 @@
+/* CSS declarations go here */
+.board {
+  width: 75vh;
+  height: 75vh;
+  background: #A0D4D5;
+}
+
+.card {
+  width: 10vh;
+  background: #637E95;
+  word-wrap: break-word;
+}
+
+.card p {
+  color: #E1E1E2;
+  font-family: 'Oswald', sans-serif;
+}

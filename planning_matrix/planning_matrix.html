@@ -1,0 +1,46 @@
+<head>
+  <title>simple_matrix</title>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> board}}
+  {{> addCard}}
+  {{> cardList}}
+</body>
+
+<template name="board">
+  <div class='board'>
+    {{#each tasks}}
+      {{> card}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="cardList">
+  <p>List of tasks</p>
+  <div class='cardList'>
+    {{#each tasks}}
+      {{name}}<br>
+    {{/each}}
+  </div>
+</template>
+
+<template name="addCard">
+  <form class="new-task">
+     <input type="text" name="name" placeholder="Type to add new tasks" />
+     <input type="number" name="cost" placeholder="Estimated Cost" />
+     <input type="number" name="benefit" placeholder="Estimated Benefit" />
+     <input type="submit" value="Submit" />
+   </form>
+</template>
+
+<template name="card">
+  <div class="card" style="position:relative;top:{{cost}}px;left:{{benefit}}px">
+    <p>
+      {{name}}<br>{{cost}}, {{benefit}}
+    </p>
+  </div>
+</template>
