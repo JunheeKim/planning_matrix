@@ -24,6 +24,14 @@ if (Meteor.isClient) {
       return Tasks.find({}, {sort: {createdAt: -1}});
     }
   });
+  Template.cardRow.events({
+    "submit .delete-task": function (event) {
+      event.preventDefault();
+      Tasks.remove({
+        _id: event.target.task_id.value
+      });
+    }
+  });
 }
 
 if (Meteor.isServer) {

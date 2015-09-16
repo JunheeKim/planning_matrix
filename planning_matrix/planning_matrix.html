@@ -23,8 +23,20 @@
   <p>List of tasks</p>
   <div class='cardList'>
     {{#each tasks}}
-      {{name}}<br>
+      {{> cardRow}}
     {{/each}}
+  </div>
+</template>
+
+<template name="cardRow">
+  <div class="cardRow">
+    <p>
+      {{name}}
+      <form class="delete-task">
+        <input type="hidden" name="task_id" value={{_id}}>
+        <input type="submit" value="Delete" />
+      </form>
+    </p>
   </div>
 </template>
 
