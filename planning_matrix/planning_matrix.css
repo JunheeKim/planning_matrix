@@ -1,18 +1,25 @@
 /* CSS declarations go here */
-.board {
-  width: 75vh;
-  height: 75vh;
+html, body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+div.board {
+  width: 80%;
+  height: 80%;
   background: #A0D4D5;
   position: relative;
 }
 
 .card {
-  width: 10vh;
+  width: 10%;
   background: #637E95;
   word-wrap: break-word;
 }
 
-.card .close {
+.card .delete {
   position: absolute;
   top: 0;
   right: 0;

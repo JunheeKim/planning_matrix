@@ -4,41 +4,18 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
   {{> board}}
-  {{> addCard}}
-  <!-- {{> cardList}} -->
 </body>
 
 <template name="board">
+  <h1>Cost - Benefit analysis</h1>
   <div class='board'>
     {{#each tasks}}
       {{> card}}
     {{/each}}
   </div>
+  {{> addCard}}
 </template>
-
-<!-- <template name="cardList">
-  <p>List of tasks</p>
-  <div class='cardList'>
-    {{#each tasks}}
-      {{> cardRow}}
-    {{/each}}
-  </div>
-</template>
-
-<template name="cardRow">
-  <div class="cardRow">
-    <p>
-      {{name}}
-      <form class="delete-task">
-        <input type="hidden" name="task_id" value={{_id}}>
-        <input type="submit" value="Delete" />
-      </form>
-    </p>
-  </div>
-</template> -->
 
 <template name="addCard">
   <form class="new-task">
@@ -50,8 +27,8 @@
 </template>
 
 <template name="card">
-  <div class="card" style="position:absolute;bottom:{{benefit}}px;right:{{cost}}px">
-    <button id={{_id}} class="close">X</button>
+  <div class="card" style="position:absolute;bottom:{{benefitDiff}}%;right:{{costDiff}}%">
+    <button id={{_id}} class="delete">X</button>
     <p>
       {{name}}<br>{{cost}}, {{benefit}}
     </p>
